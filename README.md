@@ -1,4 +1,4 @@
-﻿# 动手学深度学习
+# 动手学深度学习
 
 [![Build Status](http://ci.d2l.ai/job/d2l-zh/job/master/badge/icon)](http://ci.d2l.ai/job/d2l-zh/job/master/)
 
@@ -32,4 +32,4 @@ BibTeX entry:
 
 感谢[社区贡献者们](https://github.com/d2l-ai/d2l-zh/graphs/contributors)为每一位读者改进这本开源书。
 
-[如何贡献](https://zh.d2l.ai/chapter_appendix/how-to-contribute.html) | [致谢](https://zh.d2l.ai/chapter_preface/preface.html#致谢) | [讨论或报告问题](https://discuss.gluon.ai) | [其他](INFO.md  )
+[如何贡献](https://zh.d2l.ai/chapter_appendix/how-to-contribute.html) | [致谢](https://zh.d2l.ai/chapter_preface/preface.html#致谢) | [讨论或报告问题](https://discuss.gluon.ai) | [其他](INFO.md)

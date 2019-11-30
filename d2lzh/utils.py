@@ -173,7 +173,7 @@ def _get_batch(batch, ctx):
 
 def get_data_ch7():
     """Get the data set used in Chapter 7."""
-    data = np.genfromtxt('../data/airfoil_self_noise.dat', delimiter='\t')
+    data = np.genfromtxt('data/airfoil_self_noise.dat', delimiter='\t')
     data = (data - data.mean(axis=0)) / data.std(axis=0)
     return nd.array(data[:, :-1]), nd.array(data[:, -1])
 
@@ -241,7 +241,7 @@ def load_data_fashion_mnist(batch_size, resize=None, root=os.path.join(
 
 def load_data_jay_lyrics():
     """Load the Jay Chou lyric data set (available in the Chinese book)."""
-    with zipfile.ZipFile('../data/jaychou_lyrics.txt.zip') as zin:
+    with zipfile.ZipFile('data/jaychou_lyrics.txt.zip') as zin:
         with zin.open('jaychou_lyrics.txt') as f:
             corpus_chars = f.read().decode('utf-8')
     corpus_chars = corpus_chars.replace('\n', ' ').replace('\r', ' ')
@@ -255,7 +255,7 @@ def load_data_jay_lyrics():
 
 def load_data_pikachu(batch_size, edge_size=256):
     """Download the pikachu dataest and then load into memory."""
-    data_dir = '../data/pikachu'
+    data_dir = 'data/pikachu'
     _download_pikachu(data_dir)
     train_iter = image.ImageDetIter(
         path_imgrec=os.path.join(data_dir, 'train.rec'),
@@ -276,7 +276,7 @@ def load_data_pikachu(batch_size, edge_size=256):
 
 def load_data_time_machine():
     """Load the time machine data set (available in the English book)."""
-    with open('../data/timemachine.txt') as f:
+    with open('data/timemachine.txt') as f:
         corpus_chars = f.read()
     corpus_chars = corpus_chars.replace('\n', ' ').replace('\r', ' ').lower()
     corpus_chars = corpus_chars[0:10000]
@@ -355,7 +355,7 @@ def read_imdb(folder='train'):
     """Read the IMDB data set for sentiment analysis."""
     data = []
     for label in ['pos', 'neg']:
-        folder_name = os.path.join('../data/aclImdb/', folder, label)
+        folder_name = os.path.join('data/aclImdb/', folder, label)
         for file in os.listdir(folder_name):
             with open(os.path.join(folder_name, file), 'rb') as f:
                 review = f.read().decode('utf-8').replace('\n', '').lower()
@@ -364,7 +364,7 @@ def read_imdb(folder='train'):
     return data
 
 
-def read_voc_images(root='../data/VOCdevkit/VOC2012', is_train=True):
+def read_voc_images(root='data/VOCdevkit/VOC2012', is_train=True):
     """Read VOC images."""
     txt_fname = '%s/ImageSets/Segmentation/%s' % (
         root, 'train.txt' if is_train else 'val.txt')
